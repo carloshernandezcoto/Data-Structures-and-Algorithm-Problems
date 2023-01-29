@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script src="MyFunction.js" type="text/javascript"></script> 
+    <script>
+
+  //TC1
+  const tree1 = new BinaryTree(1);
+  tree1.left = new BinaryTree(2);
+  tree1.right = new BinaryTree(3);
+  tree1.left.left = new BinaryTree(4);
+  tree1.left.right = new BinaryTree(5);
+  tree1.right.right = new BinaryTree(6);
+  tree1.left.right.left = new BinaryTree(7);
+  tree1.left.right.right = new BinaryTree(8);
+
+  const tree2 = new BinaryTree(1);
+  tree2.left = new BinaryTree(2);
+  tree2.right = new BinaryTree(3);
+  tree2.left.left = new BinaryTree(4);
+  tree2.left.right = new BinaryTree(7);
+  tree2.right.right = new BinaryTree(5);
+  tree2.right.right.left = new BinaryTree(8);
+  tree2.right.right.right = new BinaryTree(6);
+  //tree2.right.right.right.left = new BinaryTree(9);
+
+  //TC2
+  // const tree1 = new BinaryTree(2);
+  // tree1.left = null;
+  // tree1.right = null;
+  
+  // const tree2 = new BinaryTree(1);
+  // tree2.left = null;
+  // tree2.right = null;
+  
+  const expected = true;
+  const actual = compareLeafTraversal(tree1, tree2);
+
+    </script>
+</body>
+
+</html>

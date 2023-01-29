@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script src="MyFunction.js" type="text/javascript"></script> 
+    <script>
+        const root = new BinaryTree(1);
+        root.left = new BinaryTree(2);
+        root.left.parent = root;
+        root.right = new BinaryTree(3);
+        root.right.parent = root;
+        root.left.left = new BinaryTree(4);
+        root.left.left.parent = root.left;
+        root.left.right = new BinaryTree(5);
+        root.left.right.parent = root.left;
+        root.left.left.left = new BinaryTree(6);
+        root.left.left.left.parent = root.left.left;
+        const node = root.right;
+        const result = findSuccessor(root, node);
+    </script>
+</body>
+
+</html>

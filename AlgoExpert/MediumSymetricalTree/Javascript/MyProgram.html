@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script src="MyFunction.js" type="text/javascript"></script> 
+    <script>
+        const tree = new BinaryTree(6);
+        tree.left = new BinaryTree(5);
+        tree.right = new BinaryTree(5);
+        tree.left.left = new BinaryTree(7);
+        tree.left.right = new BinaryTree(9);
+        tree.right.left = new BinaryTree(9);
+        tree.right.right = new BinaryTree(7);
+
+        const result = symmetricalTree(tree);
+
+    </script>
+</body>
+
+</html>

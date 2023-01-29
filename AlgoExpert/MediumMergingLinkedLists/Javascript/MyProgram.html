@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script src="MyFunction2.js" type="text/javascript"></script> 
+    <script>
+        const l1 = new LinkedList(5);
+        l1.next = new LinkedList(12);
+        l1.next.next = new LinkedList(14);
+        l1.next.next.next = new LinkedList(2);
+        const common = new LinkedList(13);
+        l1.next.next.next.next = common;
+        l1.next.next.next.next.next = new LinkedList(21);
+        l1.next.next.next.next.next.next = new LinkedList(33);
+        l1.next.next.next.next.next.next.next = new LinkedList(9);
+
+        const l2 = new LinkedList(10);
+        l2.next = new LinkedList(3);
+        l2.next.next = new LinkedList(48);
+        l2.next.next.next = new LinkedList(0);
+        l2.next.next.next.next = common;
+
+        const commonNode = mergingLinkedLists(l1, l2);
+    </script>
+</body>
+
+</html>

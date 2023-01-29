@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script src="MyFunction.js" type="text/javascript"></script> 
+    <script>
+        function createListFromArray(array) {
+            const head = new LinkedList(array[0]);
+            let current = head;
+
+            for (let i = 1; i < array.length; i++) {
+                current.next = new LinkedList(array[i]);
+                current = current.next;
+            }
+            current.next = null;
+            return head;
+        }
+        
+        const list = createListFromArray([1, 2, 3, 4]);
+        const reversedList = reverseLinkedList(list);
+    </script>
+</body>
+
+</html>

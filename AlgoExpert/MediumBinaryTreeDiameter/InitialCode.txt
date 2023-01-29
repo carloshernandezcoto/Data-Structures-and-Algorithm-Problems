@@ -1,0 +1,38 @@
+// This is an input class. Do not edit.
+class BinaryTree {
+  constructor(value) {
+    this.value = value;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+function binaryTreeDiameter(tree) {
+  return maxDiameter(tree, 0);
+}
+
+function maxDiameter(node, diameter) {
+  if(node == null)
+		return;
+	let currentDepth = maxDepth(node)
+	if(currentDepth > diameter)
+		diameter = currentDepth;
+	maxDiameter(node.left);
+	maxDiameter(node.right);
+	return diameter;
+}
+
+function maxDepth(node) {
+  if (node.left == null && node.right == null)
+		return 1;
+	if(node.left == null)
+		return 1 + maxDepth(node.right);
+	if(node.right == null)
+		return 1 + maxDepth(node.left);
+	return maxDepth(node.left) + maxDepth(node.right);
+}
+
+
+// Do not edit the line below.
+exports.binaryTreeDiameter = binaryTreeDiameter;
+exports.BinaryTree = BinaryTree;

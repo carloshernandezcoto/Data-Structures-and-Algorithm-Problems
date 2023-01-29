@@ -1,0 +1,24 @@
+
+[102, [3, 10]]
+
+[12, [3, 7, 10]]
+
+[29, [3, 7, 10]]
+
+[24, [1, 7, 10]]
+
+[10, [3, 7, 9]]
+
+[10, [4, 7, 9]]
+
+[10, [1, 3, 7, 9]]
+
+Sort.
+Discard denominations bigger than target.
+Start processing the largest denomination.
+If amount is not reached, re-run the algorithm with the remaining amount of money to cover and remove the largest coin from the denominations array. Before doing that, increase the accumulator by the amount of big coins used.
+
+[a, b, c, ...] -> xa + yb + zc + ... = n
+
+n [1, 2]   n/2 + n%2(siempre 1)
+n [1, 2, 3] n/3 + (n%3)/2

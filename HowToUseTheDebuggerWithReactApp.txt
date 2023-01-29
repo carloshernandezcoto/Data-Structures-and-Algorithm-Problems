@@ -1,0 +1,21 @@
+1. Install the following extension to VS Code: "Debugger for Chrome".
+
+2. Create a file named "launch.json" with the following content and paste it in the .vscode folder of your React app.
+
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Chrome",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceRoot}/src"
+    }
+  ]
+}
+
+3.Press f5 and debug.

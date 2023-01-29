@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script src="MyFunction.js" type="text/javascript"></script> 
+    <script>
+        const ll1 = new LinkedList(2);
+        const ll1a = new LinkedList(4);
+        const ll1b = new LinkedList(7);
+        const ll1c = new LinkedList(1);
+        ll1.next = ll1a;
+        ll1a.next = ll1b;
+        ll1b.next =ll1c;
+
+        const ll2 = new LinkedList(9);
+        const ll2a = new LinkedList(4)
+        const ll2b = new LinkedList(5)
+        ll2.next = ll2a;
+        ll2a.next = ll2b;
+
+        const result = sumOfLinkedLists(ll1, ll2);
+  
+    </script>
+</body>
+
+</html>

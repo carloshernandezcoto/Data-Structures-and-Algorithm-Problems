@@ -1,0 +1,17 @@
+How to create a VS Code console application?
+
+
+Prerequisites:
+- Install VS Code.
+- Instal .Net Core SDK 5 or above.
+
+Open a Windows cmd
+cd C:\Users\carlosh\Documents\Code\AlgorithmSolutions (go to the folder where you want to create the app)
+dotnet new console -o myApp   (creates a new folder with an application called "myApp")
+cd myApp (go to the newly created application)
+code . (open the app with VS Code)
+dotnet restore (resolves the dependencies of the project and gives you access to the required .NET Core packages that are needed to build the project)
+modify the "launch.json" file and add the following line for using an external console if you want:
+	"console": "externalTerminal",
+VS Code will show this message: "Required assets to build and debug are missing from 'myApp'. Add them?" (Click yes)
+Press F5 and start debugging your program
